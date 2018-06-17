@@ -220,21 +220,36 @@ body {
     @extend %flex-settings;
     text-align: center;
 
-  div {
-    width: 25%;
-    padding-top: 95px;
-    padding-bottom: 120px;
-    background-color: #1c2a33;
-    border-top: 6px solid $another-color;
-    p {
-      font-family: $primary-font;
-      color: $another-color;
-      padding-top: 48px;
-      text-transform: uppercase;
+    div {
+      width: 25%;
+      padding-top: 95px;
+      padding-bottom: 120px;
+      background-color: #1c2a33;
+      border-top: 6px solid $another-color;
+      p {
+        font-family: $primary-font;
+        color: $another-color;
+        padding-top: 48px;
+        text-transform: uppercase;
+      }
     }
-  }
     div:nth-child(2) {
       padding-top: 106px;
+      background-color: $another-color;
+      border-top-color: white;
+
+      p {
+        color: white;
+      }
+    }
+
+    div:last-child {
+      border-top-color: white;
+      padding-top: 105px;
+
+      p {
+        color: white;
+      }
     }
   }
 }

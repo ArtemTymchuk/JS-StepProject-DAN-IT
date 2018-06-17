@@ -20,17 +20,16 @@ const gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     notify = require('gulp-notify'),
     beep = require('beepbeep'),
-    jshint = require('gulp-jshint'),
-    rename = require('gulp-rename')
+    jshint = require('gulp-jshint');
+
 
 let onError = (err) => {
     notify.onError({
         title: "Error in " + err.plugin,
         message: err.message
     })(err);
-    beep(2);
-    this.emit('end');
-}
+    beep(1);
+};
 
 
 gulp.task('sass', function () {
@@ -56,11 +55,6 @@ gulp.task('js', function () {
         .pipe(sourcemaps.init())
         .pipe(concat('script.js'))
         .pipe(gulpif(argv.build, minify()))
-        // .pipe(rename({
-        //     basename: "script",
-        //     suffix: '.min',
-        //     extname: ".js"
-        // }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest("./dist/js/"))
 });
@@ -86,6 +80,7 @@ gulp.task('reload', function () {
     gulp.watch('./src/js/**/*.js', ['js']);
     gulp.watch('./src/img/*');
     gulp.watch('./index.html').on('change', browserSync.reload)
+    gulp.watch('./src/**/*').on('change', browserSync.reload)
 });
 
 gulp.task('dev', function (callback) {
