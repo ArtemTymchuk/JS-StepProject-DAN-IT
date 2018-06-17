@@ -1,5 +1,9 @@
 'use strict';
 
+
+// use 'gulp' to run dev mode
+// use 'gulp --build' to run build mode
+
 const gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync').create(),
