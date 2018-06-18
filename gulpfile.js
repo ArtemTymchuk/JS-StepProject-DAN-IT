@@ -79,8 +79,8 @@ gulp.task('reload', function () {
     gulp.watch('./src/sass/**/*.scss', ['sass']);
     gulp.watch('./src/js/**/*.js', ['js']);
     gulp.watch('./src/img/*');
-    gulp.watch('./index.html').on('change', browserSync.reload)
-    gulp.watch('./src/**/*').on('change', browserSync.reload)
+    gulp.watch('./index.html').on('change', browserSync.reload);
+    gulp.watch('./src/**/*').on('change', browserSync.reload);
 });
 
 gulp.task('dev', function (callback) {
