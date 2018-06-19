@@ -363,7 +363,6 @@ body {
   }
 }
 
-
 .services {
   text-align: center;
 
@@ -814,10 +813,13 @@ body {
 
     .test {
 
+      overflow-y: auto;
+      overflow: hidden;
+      max-height: 340px;
       ul {
-
+        position: relative;
         li {
-
+          position: relative;
           p {
             color: #bbbbbb;
             font-weight: 300;
