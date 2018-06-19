@@ -264,6 +264,7 @@ body {
       a:last-child:hover {
         border-top-color: #00cbf6;
         color: #00cbf6;
+        background-color: white;
       }
     }
   }
@@ -292,15 +293,15 @@ body {
   }
 
   div:hover {
-    background-color: $another-color;
-    border-top-color: white;
+    background-color: $another-color !important;
+    border-top-color: white !important;
 
     p {
-      color: white;
+      color: white !important;
     }
     svg {
       path {
-        fill: white;
+        fill: white !important;
       }
     }
   }
@@ -317,16 +318,16 @@ body {
   }
 
   div:nth-child(2):hover {
-    border-top-color: $another-color;
-    background-color: #1c2a33;
+    border-top-color: $another-color !important;
+    background-color: #1c2a33 !important;
 
     p {
-      color: $another-color;
+      color: $another-color !important;
     }
 
     svg {
       path {
-        fill: $another-color
+        fill: $another-color !important;
       }
     }
   }
@@ -347,20 +348,21 @@ body {
     }
   }
   div:last-child:hover {
-    border-top-color: $another-color;
-    background-color: #1c2a33;
+    border-top-color: $another-color !important;
+    background-color: #1c2a33 !important;
 
     p {
-      color: $another-color;
+      color: $another-color !important;
     }
 
     svg {
       path {
-        fill: $another-color
+        fill: $another-color !important;
       }
     }
   }
 }
+
 
 .services {
   text-align: center;
@@ -404,27 +406,47 @@ body {
         font-size: 16px;
         font-weight: 400;
         cursor: pointer;
+
+        img {
+          display: none;
+        }
+
+        span {
+          position: absolute;
+          width: 0;
+          height: 0;
+          border: 17px solid transparent;
+          border-top-color: $another-color;
+          border-bottom: 0;
+          left: 50%;
+          top: 100%;
+          bottom: 0;
+          right: 0;
+          transform: translateX(-50%);
+          visibility: hidden;
+        }
+
+        p {
+          display: none;
+        }
       }
-      li:before {
-        top: 100%;
-        left: 43%;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-        border: 15px solid rgba(240, 242, 243, 0);
-        border-top-color: $another-color;
-        visibility: hidden;
+
+      li:first-child {
+        background-color: $another-color;
+        color: #ffffff;
+
+        span {
+          visibility: visible;
+        }
+      }
+
+      li:first-child:before {
+        visibility: visible;
       }
 
       li:hover {
-        background-color: $another-color;
-        color: white;
-      }
-
-      li:hover:before {
-        visibility: visible;
+        background-color: $another-color !important;
+        color: white !important;
       }
     }
 
@@ -436,6 +458,8 @@ body {
 
       img {
         width: 17%;
+        background-size: cover;
+        height: 141px;
       }
 
       p {
@@ -445,7 +469,6 @@ body {
         color: #777777;
         font-weight: 300;
         line-height: 25px;
-        white-space: pre-wrap;
         text-align: justify;
       }
     }
@@ -621,7 +644,7 @@ body {
   }
 }
 
-.comments {
+/*.comments {
   @extend %background-settings;
   background-image: url("../img/Layer3.png");
   padding: 99px 0 104px 0;
@@ -742,6 +765,146 @@ body {
       }
     }
   }
+}*/
+
+.comments {
+  @extend %background-settings;
+  background-image: url("../img/Layer3.png");
+  padding: 99px 0 104px 0;
+  font-family: $primary-font;
+  text-align: center;
+
+  .comments__title {
+
+    @extend %flex-settings;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+
+    h3 {
+      @extend %section-titles;
+      color: white;
+
+    }
+
+    hr {
+      margin-top: 22px;
+      @extend %hr-settings;
+    }
+
+    hr:last-child {
+      margin: 0 0 0 17px;
+    }
+  }
+
+  .comments__item {
+    @extend %flex-settings;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    span {
+      color: $another-color;
+      font-size: 120px;
+      font-weight: 900;
+      letter-spacing: -10px;
+      line-height: 85px;
+      padding-bottom: 43px;
+    }
+
+    .test {
+
+      ul {
+
+        li {
+
+          p {
+            color: #bbbbbb;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 30px;
+          }
+
+          p:nth-child(2) {
+            color: $another-color;
+            text-transform: uppercase;
+            line-height: 27px;
+            padding-top: 35px;
+          }
+
+          p:nth-child(3) {
+            font-size: 10px;
+            line-height: 18px;
+            display: inline-block;
+            margin-bottom: 27px;
+          }
+
+          .comments__item__photo {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 164px;
+            height: 163px;
+            background: rgba(31, 218, 181, 0.2) url("../img/Ellipse.png") center no-repeat;
+            border-radius: 50%;
+            margin: 0 auto;
+
+            img {
+              width: 139px;
+              height: 137px;
+            }
+          }
+        }
+      }
+    }
+
+    .comments__item__users {
+      width: 45%;
+      @extend %flex-settings;
+      align-items: center;
+      margin-top: 69px;
+
+      .comments__item__users__arrow {
+        @extend %arrow;
+        cursor: pointer;
+      }
+
+      .comments__item__users__arrow:hover {
+        background-color: $another-color;
+        color: white;
+        border-color: $another-color;
+      }
+
+      .comments__item__users__links {
+        @extend %flex-settings;
+        width: 70%;
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background-color: rgba(31, 218, 181, 0.2);
+          width: 70px;
+          height: 70px;
+          cursor: pointer;
+        }
+
+        .active {
+          background: #794044 !important;
+          color: white;
+        }
+
+        li:hover {
+          img {
+            border: 2px solid $another-color;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
 }
 
 .footer {
@@ -757,7 +920,7 @@ body {
   p {
     color: #aeaeae;
 
-    span {
+    a {
       color: $another-color;
     }
   }

@@ -7,12 +7,12 @@ $(document).ready(function () {
         let arrow = event.target.children[1];
         console.log(arrow);
         let text = event.target.lastElementChild;
-      $(".services__examples__description img").attr("src", ($(img).attr("src")));
-      $(".services__examples__description p").text($(text).text());
-      $(".services__examples__links li").css({"background-color": "#f5f9fb", "color": "#717171"});
-      $(".services__examples__links li span").css({"visibility": "hidden"});
-      $(li).css({"background-color": "#18cfab", "color": "#ffffff"});
-      $(arrow).css({"visibility": "visible"});
+        $(".services__examples__description img").attr("src", ($(img).attr("src")));
+        $(".services__examples__description p").text($(text).text());
+        $(".services__examples__links li").css({"background-color": "#f5f9fb", "color": "#717171"});
+        $(".services__examples__links li span").css({"visibility": "hidden"});
+        $(li).css({"background-color": "#18cfab", "color": "#ffffff"});
+        $(arrow).css({"visibility": "visible"});
     });
 
 
@@ -35,11 +35,13 @@ $(document).ready(function () {
         $(".capabilities div:nth-child(2) p, .capabilities div:last-child p")
             .css("color", "#ffffff");
     });
-    
+
+
     $(".capabilities div:nth-child(2), .capabilities div:last-child").mouseenter(function () {
         $(".capabilities div").css({"background-color": "#18cfab", "border-top-color": "#ffffff"});
         $(".capabilities div svg path").css("fill", "#ffffff");
         $(".capabilities div p").css("color", "#ffffff");
+
     }).mouseleave(function () {
         $(".capabilities div").css({"background-color": "#18cfab", "border-top-color": "#ffffff"});
         $(".capabilities div:first-child, .capabilities div:nth-child(3)")
@@ -53,8 +55,6 @@ $(document).ready(function () {
         $(".capabilities div:nth-child(2) p, .capabilities div:last-child p")
             .css("color", "#ffffff");
     });
-
-
 
 
 });

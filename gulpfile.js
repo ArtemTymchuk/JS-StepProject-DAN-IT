@@ -68,6 +68,7 @@ gulp.task('img', function () {
 gulp.task('clean', function () {
     return gulp.src('./dist', {read: false})
         .pipe(gulpif(argv.build, clean()))
+
 });
 
 
