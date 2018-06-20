@@ -7,7 +7,7 @@
 const gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync').create(),
-    minify = require('gulp-minify'),
+    minify = require('gulp-js-minify'),
     concat = require('gulp-concat'),
     autoprefixer = require('gulp-autoprefixer'),
     imagemin = require('gulp-imagemin'),
@@ -31,6 +31,10 @@ let onError = (err) => {
     beep(1);
 };
 
+gulp.task('html', function () {
+    gulp.src('./src/index.html')
+        .pipe(gulp.dest('./dist'));
+});
 
 gulp.task('sass', function () {
     return gulp.src("./src/sass/**/*.scss")
@@ -53,7 +57,7 @@ gulp.task('js', function () {
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish', {beep: true}))
         .pipe(sourcemaps.init())
-        .pipe(concat('script.js'))
+        .pipe(concat('script.min.js'))
         .pipe(gulpif(argv.build, minify()))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest("./dist/js/"))
@@ -75,18 +79,18 @@ gulp.task('clean', function () {
 gulp.task('reload', function () {
 
     browserSync.init({
-        server: "./"
+        server: "./dist"
     });
     gulp.watch('./src/sass/**/*.scss', ['sass']);
     gulp.watch('./src/js/**/*.js', ['js']);
-    gulp.watch('./src/img/*');
-    gulp.watch('./index.html').on('change', browserSync.reload);
-    gulp.watch('./src/**/*').on('change', browserSync.reload);
+    gulp.watch('./src/img/*', ['img']);
+    gulp.watch('./src/*.html').on('change', browserSync.reload);
+    gulp.watch('./src/**/*', ['html']).on('change', browserSync.reload);
 });
 
 gulp.task('dev', function (callback) {
     runSequence('clean',
-        ['sass', 'js', 'img'],
+        ['html', 'sass', 'js', 'img'],
         'reload',
         callback);
 });

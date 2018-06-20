@@ -1,62 +1,42 @@
+$(document).ready(function () {
 
-$("#indicators li:first-child").addClass("active");
+    $(".comments__item__users__links li:first-child").addClass("active");
 
-function slide(target) {
-    $("#indicators li").removeClass("active").eq(target).addClass("active");
-    $("#slider ul li").animate({
-        'right': +350 * target + 'px'
-    }, 250);
-}
-
-$("#indicators li").click(function() {
-    var target = $(this).index();
-    slide(target);
-
-    //Stopped auto slide when user clicked
-    clearInterval(timer);
-    //Then started auto slide again
-    timer = setInterval(function() {
-        $('#next').trigger('click');
-    }, 2500);
-
-});
-
-$("#next").click(function() {
-    var target = $("#indicators li.active").index();
-    if (target === $("#indicators li").length - 1) {
-        target = -1;
+    function slide(target) {
+        $(".comments__item__users__links li").removeClass("active").eq(target).addClass("active");
+        $(".comments__slider ul li").animate({
+            'right': +1160 * target + 'px'
+        });
     }
-    target = target + 1;
-    slide(target);
 
-    //Stopped auto slide when user clicked
-    clearInterval(timer);
-    //Then started auto slide again
-    timer = setInterval(function() {
-        $('#next').trigger('click');
-    }, 2500);
+    $(".comments__item__users__links li").click(function () {
+        var target = $(this).index();
+        slide(target);
+        clearInterval(timer);
+        $('.right').trigger('click');
+    });
+
+    $(".right").click(function () {
+        var target = $(".comments__item__users__links li.active").index();
+        if (target === $(".comments__item__users__links li").length - 1) {
+            target = -1;
+        }
+        target = target + 1;
+        slide(target);
+        clearInterval(timer);
+        $('.right').trigger('click');
+    });
+
+    $(".left").click(function () {
+        var target = $(".comments__item__users__links li.active").index();
+        if (target === 0) {
+            target = $(".comments__item__users__links li").length;
+        }
+        target = target - 1;
+        slide(target);
+        clearInterval(timer);
+        $('.right').trigger('click');
+    });
 
 });
 
-$("#prev").click(function() {
-    var target = $("#indicators li.active").index();
-    if (target === 0) {
-        target = $("#indicators li").length;
-    }
-    target = target - 1;
-    slide(target);
-
-    //Stopped auto slide when user clicked
-    clearInterval(timer);
-    //Then started auto slide again
-    timer = setInterval(function() {
-        $('#next').trigger('click');
-    }, 2500);
-
-});
-
-//Auto slide
-var timer = null;
-timer = setInterval(function() {
-    $('#next').trigger('click');
-}, 2500);
