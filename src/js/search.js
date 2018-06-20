@@ -15,8 +15,9 @@ $(document).ready(function () {
             $(".header__menu__items__links li:nth-child(10)").css({"display": "none"});
             let textValue = $(".header__menu__items__links li:nth-child(10) input").val();
             let key = '9342853-8c19e5cbc2492848be3ea2f52';
-            let url = 'https://pixabay.com/api/?key=' + key + '&q=' + textValue + '&per_page=100&image_type=photo&lang=ru&lang=en&editors_choice=true';
+            let url = 'https://pixabay.com/api/?key=' + key + '&q=' + textValue + '&per_page=100&image_type=photo&lang=ru&lang=en';
             $.get(url, function (data) {
+                console.log(url);
                 let images = data.hits;
                 if (images.length == 0) {
                     $(".header__sorry").show();
@@ -38,7 +39,7 @@ $(document).ready(function () {
                         $grid.masonry();
                     });
 
-                    $("html, body").animate({scrollTop: $(".header").height()+ 3414 },2000);
+                    $("html, body").animate({scrollTop: $(".header").height()+ 3414 },3000);
 
 
 
