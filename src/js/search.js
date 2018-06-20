@@ -37,6 +37,11 @@ $(document).ready(function () {
                     $grid.imagesLoaded().progress(function () {
                         $grid.masonry();
                     });
+
+                    $("html, body").animate({scrollTop: $(".header").height()+ 3414 },2000);
+
+
+
                 }
             });
             $(".header__menu__items__links li:nth-child(10) input").val("");
