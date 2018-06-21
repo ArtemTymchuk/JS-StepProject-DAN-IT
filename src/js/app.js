@@ -7,8 +7,8 @@ $(document).ready(function () {
         let arrow = event.target.children[1];
         console.log(arrow);
         let text = event.target.lastElementChild;
-        $(".services__examples--description img").attr("src", ($(img).attr("src")));
-        $(".services__examples--description p").text($(text).text());
+        $(".services__description img").attr("src", ($(img).attr("src")));
+        $(".services__description p").text($(text).text());
         $(".services__examples ul li").css({"background-color": "#f5f9fb", "color": "#717171"});
         $(".services__examples ul li span").css({"visibility": "hidden"});
         $(li).css({"background-color": "#18cfab", "color": "#ffffff"});
