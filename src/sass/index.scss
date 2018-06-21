@@ -195,7 +195,7 @@ body {
 
         li:nth-child(10) {
           display: none;
-          .image__search {
+          .links__search {
             input[type=text] {
               padding-left: 10px;
               height: 40px;
@@ -250,6 +250,7 @@ body {
       bottom: 0;
       right: 50%;
       transform: translateX(50%);
+      display: none;
     }
   }
 
