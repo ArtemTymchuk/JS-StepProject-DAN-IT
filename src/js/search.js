@@ -38,14 +38,14 @@ $(document).ready(function () {
                     $(".header__sorry").hide();
                     for (let i = 0, child = 1; i <= images.length - 1; i++, child++) {
                         let src = images[i].largeImageURL;
-                        let selector = '.photo__greed__item:nth-child(' + [child] + ') img';
+                        let selector = '.greed__item:nth-child(' + [child] + ') img';
                         $(`${selector}`).attr("src", src);
                     }
 
                     var $grid = $('.photo__greed').masonry({
-                        itemSelector: '.photo__greed__item',
+                        itemSelector: '.greed__item',
                         percentPosition: true,
-                        columnWidth: '.photo__greed__sizer'
+                        columnWidth: '.greed__sizer'
                     });
 
                     $grid.imagesLoaded().progress(function () {
