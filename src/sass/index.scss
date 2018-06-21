@@ -777,7 +777,7 @@ body {
             margin-bottom: 27px;
           }
 
-          .comments__item__photo {
+          .slider__photo {
 
             display: flex;
             align-items: center;
@@ -797,24 +797,24 @@ body {
       }
     }
 
-    .comments__item__users {
+    .comments__users {
       width: 45%;
       @extend %flex-settings;
       align-items: center;
       margin-top: 69px;
 
-      .comments__item__users__arrow {
+      .comments__arrow {
         @extend %arrow;
         cursor: pointer;
       }
 
-      .comments__item__users__arrow:hover {
+      .comments__arrow:hover {
         background-color: $another-color;
         color: white;
         border-color: $another-color;
       }
 
-      .comments__item__users__links {
+      .users__links {
         @extend %flex-settings;
         width: 70%;
 
@@ -871,11 +871,11 @@ body {
     margin-top: 70px;
     background: #EEE;
 
-    .photo__greed__sizer {
+    .greed__sizer {
       width: 33.333%;
     }
 
-    .photo__greed__item {
+    .greed__item {
       width: 33.333%;
       float: left;
 
