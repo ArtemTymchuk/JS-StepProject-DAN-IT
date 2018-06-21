@@ -1,16 +1,16 @@
 $(document).ready(function () {
 
-    $(".services__examples__links li").click(function (event) {
+    $(".services__examples ul li").click(function (event) {
         console.log(event.target);
         let li = event.target;
         let img = event.target.firstElementChild;
         let arrow = event.target.children[1];
         console.log(arrow);
         let text = event.target.lastElementChild;
-        $(".services__examples__description img").attr("src", ($(img).attr("src")));
-        $(".services__examples__description p").text($(text).text());
-        $(".services__examples__links li").css({"background-color": "#f5f9fb", "color": "#717171"});
-        $(".services__examples__links li span").css({"visibility": "hidden"});
+        $(".services__examples--description img").attr("src", ($(img).attr("src")));
+        $(".services__examples--description p").text($(text).text());
+        $(".services__examples ul li").css({"background-color": "#f5f9fb", "color": "#717171"});
+        $(".services__examples ul li span").css({"visibility": "hidden"});
         $(li).css({"background-color": "#18cfab", "color": "#ffffff"});
         $(arrow).css({"visibility": "visible"});
     });

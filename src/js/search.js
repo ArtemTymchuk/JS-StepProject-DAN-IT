@@ -2,18 +2,31 @@ $(document).ready(function () {
 
     $(".header__sorry").hide();
 
-    $(".header__menu__items__links li:last-child").click(function () {
-        $(".header__menu__items__links").css({"width": "75%"});
-        $(".header__menu__items__links li:nth-child(10)").css({"display": "block"});
+
+
+
+    $(".header__items ul li:last-child").click(function () {
+        $(".header__items ul").css({"width": "75%"});
+        $(".header__items ul li:nth-child(10)").toggle()
+    });
+
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest(".header__items ul").length) {
+            $('.header__items ul li:nth-child(10)').hide();
+            $(".header__items ul").css({"width": "60%"});
+        }
+        e.stopPropagation();
     });
 
 
-    $(".header__menu__items__links li:nth-child(10)").keydown(function (e) {
+
+
+    $(".header__items ul li:nth-child(10)").keydown(function (e) {
         if (e.which == 13) {
             e.preventDefault();
-            $(".header__menu__items__links").css({"width": "60%"});
-            $(".header__menu__items__links li:nth-child(10)").css({"display": "none"});
-            let textValue = $(".header__menu__items__links li:nth-child(10) input").val();
+            $(".header__items ul").css({"width": "60%"});
+            $(".header__items ul li:nth-child(10)").css({"display": "none"});
+            let textValue = $(".header__items ul li:nth-child(10) input").val();
             let key = '9342853-8c19e5cbc2492848be3ea2f52';
             let url = 'https://pixabay.com/api/?key=' + key + '&q=' + textValue + '&per_page=100&image_type=photo&lang=ru&lang=en';
             $.get(url, function (data) {
@@ -45,7 +58,7 @@ $(document).ready(function () {
 
                 }
             });
-            $(".header__menu__items__links li:nth-child(10) input").val("");
+            $(".header__items ul li:nth-child(10) input").val("");
 
     return false;
 

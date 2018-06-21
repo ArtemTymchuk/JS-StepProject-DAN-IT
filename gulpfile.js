@@ -28,7 +28,7 @@ let onError = (err) => {
         title: "Error in " + err.plugin,
         message: err.message
     })(err);
-    beep(1);
+    beep();
 };
 
 gulp.task('html', function () {
@@ -39,6 +39,8 @@ gulp.task('html', function () {
 gulp.task('sass', function () {
     return gulp.src("./src/sass/**/*.scss")
         .pipe(plumber({errorHandler: onError}))
+        .pipe(jshint())
+        .pipe(jshint.reporter('jshint-stylish', {beep: true}))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false

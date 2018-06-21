@@ -102,16 +102,16 @@ body {
   font-family: $primary-font;
   @extend %background-settings;
 
-  .header__menu {
+  &__menu {
     position: relative;
     background-color: rgba(73, 71, 63, 0.6);
 
-    .header__menu__items {
+    .header__items {
       @extend %flex-settings;
       padding-top: 28px;
       padding-bottom: 25px;
 
-      .header__menu__items__logo {
+      .header__logo {
         @extend %flex-settings;
         position: relative;
         a:first-child {
@@ -147,7 +147,7 @@ body {
         }
       }
 
-      .header__menu__items__logo:hover {
+      .header__logo:hover {
 
         a:first-child {
           svg {
@@ -170,7 +170,7 @@ body {
         }
       }
 
-      .header__menu__items__links {
+      ul {
         @extend %flex-settings;
         width: 60%;
 
@@ -253,7 +253,7 @@ body {
     }
   }
 
-  .header__about {
+  &__about {
     text-align: center;
     margin-top: 246px;
     text-transform: uppercase;
@@ -289,7 +289,7 @@ body {
       text-transform: none;
     }
 
-    .header__about__links {
+    .header__links {
       @extend %flex-settings;
       justify-content: center;
       margin-top: 146px;
@@ -414,7 +414,7 @@ body {
 .services {
   text-align: center;
 
-  .services__title {
+  &__title {
     margin-top: 82px;
     @extend %flex-settings;
     flex-direction: column;
@@ -435,11 +435,11 @@ body {
     }
   }
 
-  .services__examples {
+  &__examples {
     padding-top: 70px;
     padding-bottom: 104px;
 
-    .services__examples__links {
+    ul {
       @extend %flex-settings;
       justify-content: center;
 
@@ -498,7 +498,7 @@ body {
       }
     }
 
-    .services__examples__description {
+    .services__description {
       @extend %flex-settings;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -582,16 +582,16 @@ body {
     @extend %flex-settings;
     margin-top: 70px;
 
-    .news__storage__item {
+    .storage__item {
       width: 263px;
       margin-bottom: 26px;
 
-      .news__storage__item__img {
+      .storage__img {
         @extend %background-settings;
         background-image: url("../img/news1.png");
         height: 229px;
 
-        .news__storage__item__img__date {
+        div {
           width: 68px;
           height: 66px;
           background-color: #203e38;
@@ -607,7 +607,7 @@ body {
         }
       }
 
-      .news__storage__item__description {
+      .storage__description {
         padding: 14px 52px 12px 17px;
         background-color: #f5f9fb;
         border: 1px solid #f4f5f5;
@@ -642,49 +642,49 @@ body {
         }
       }
     }
-    .news__storage__item:nth-child(2) {
-      .news__storage__item__img {
+    .storage__item:nth-child(2) {
+      .storage__img {
         background-image: url("../img/news2.png");
       }
     }
-    .news__storage__item:nth-child(3) {
-      .news__storage__item__img {
+    .storage__item:nth-child(3) {
+      .storage__img {
         background-image: url("../img/news3.png");
       }
     }
-    .news__storage__item:nth-child(4) {
-      .news__storage__item__img {
+    .storage__item:nth-child(4) {
+      .storage__img {
         background-image: url("../img/news4.png");
       }
     }
-    .news__storage__item:nth-child(5) {
-      .news__storage__item__img {
+    .storage__item:nth-child(5) {
+      .storage__img {
         background-image: url("../img/news5.png");
       }
     }
-    .news__storage__item:nth-child(6) {
-      .news__storage__item__img {
+    .storage__item:nth-child(6) {
+      .storage__img {
         background-image: url("../img/news6.png");
       }
     }
-    .news__storage__item:nth-child(7) {
-      .news__storage__item__img {
+    .storage__item:nth-child(7) {
+      .storage__img {
         background-image: url("../img/news7.png");
       }
     }
-    .news__storage__item:nth-child(8) {
-      .news__storage__item__img {
+    .storage__item:nth-child(8) {
+      .storage__img {
         background-image: url("../img/news8.png");
       }
     }
 
-    .news__storage__item:hover {
-      .news__storage__item__img {
-        .news__storage__item__img__date {
+    .storage__item:hover {
+      .storage__img {
+        div {
           background-color: $another-color;
         }
       }
-      .news__storage__item__description {
+      .storage__description {
         h5 {
           color: $another-color;
         }
