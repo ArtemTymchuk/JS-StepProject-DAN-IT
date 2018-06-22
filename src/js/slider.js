@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     function slide(target) {
         $(".users__photo").removeClass("active").eq(target).addClass("active");
-        $(".list__content").animate({
+        $(".man").animate({
             'right': +1160 * target + 'px'
         });
     }
@@ -30,7 +30,7 @@ $(document).ready(function () {
     $(".left").click(function () {
         var target = $(".users__photo.active").index();
         if (target === 0) {
-            target = $(".users__photo li").length;
+            target = $(".users__photo").length;
         }
         target = target - 1;
         slide(target);

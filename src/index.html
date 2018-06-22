@@ -17,8 +17,8 @@
 <section class="header">
     <div class="header__menu">
         <div class="container">
-            <div class="header__items">
-                <div class="header__logo logo">
+            <div class="menu">
+                <div class="logo">
                     <a class="logo__img" href="">
                         <svg xmlns="http://www.w3.org/2000/svg"
                              width="58px" height="67px" viewBox="0 0 58 67">
@@ -31,18 +31,18 @@
                     <a class="logo__company-name" href="">the<span class="logo__company-name--text-color">Ham</span></a>
 
                 </div>
-                <ul class="header__links links">
-                    <li class="links__item"><a href="">home</a></li>
-                    <li class="links__item"><a href="">about</a></li>
-                    <li class="links__item"><a href="">skills</a></li>
-                    <li class="links__item"><a href="">service</a></li>
-                    <li class="links__item"><a href="">work</a></li>
-                    <li class="links__item"><a href="">testimonial</a></li>
-                    <li class="links__item"><a href="">blog</a></li>
-                    <li class="links__item"><a href="">team</a></li>
-                    <li class="links__item"><a href="">contact</a></li>
-                    <li id="search-text" class="links__item">
-                        <form method="get" action="" class="links__search">
+                <ul class="pages">
+                    <li class="pages__item"><a href="">home</a></li>
+                    <li class="pages__item"><a href="">about</a></li>
+                    <li class="pages__item"><a href="">skills</a></li>
+                    <li class="pages__item"><a href="">service</a></li>
+                    <li class="pages__item"><a href="">work</a></li>
+                    <li class="pages__item"><a href="">testimonial</a></li>
+                    <li class="pages__item"><a href="">blog</a></li>
+                    <li class="pages__item"><a href="">team</a></li>
+                    <li class="pages__item"><a href="">contact</a></li>
+                    <li id="search-text" class="pages__item">
+                        <form method="get" action="" class="pages__search">
                             <input id="search-item" type="text" placeholder="enter category">
                             <!--<input type="submit" value="search">-->
                         </form>
@@ -60,7 +60,7 @@
 </svg>
                     </li>
                 </ul>
-                <div class="header__sorry">
+                <div class="sorry">
                     <h6>sorry, we didn't search photos by your request :(</h6>
                     <h6>try again</h6>
                 </div>
@@ -68,14 +68,14 @@
             </div>
         </div>
     </div>
-    <div class="header__about, about">
+    <div class="about">
         <div class="container">
             <p class="about__slogan">the ham is <span class="about__slogan--text-color">wordpress theme</span></p>
             <h1 class="about__title">we are creative</h1>
             <h6 class="about__offer">Just Buy And Enjoy These Awesome Features</h6>
-            <div class="about__buttons">
-                <a class="buttons" href="">explore now</a>
-                <a class="buttons right" href="">purchase now</a>
+            <div class="buttons">
+                <a class="buttons__left" href="">explore now</a>
+                <a class="buttons__right" href="">purchase now</a>
             </div>
         </div>
     </div>
@@ -126,17 +126,17 @@
 
 <section class="services">
     <div class="container">
-        <div class="services__title">
+        <div class="title">
             <h3 class="title__text">Our Services</h3>
             <hr class="title__line">
             <hr class="title__line">
         </div>
-        <div class="services__examples">
-            <ul class="examples__list">
-                <li class="list__item">Web Design
-                    <img class="list__item--img" src="img/Image1.png" alt="">
-                    <span class="list__item--arrow"></span>
-                    <p class="list__item--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet commodi dolorum eum
+        <div class="examples">
+            <ul class="examples__list offers">
+                <li class="offers__item">Web Design
+                    <img class="offers__item--img" src="img/Image1.png" alt="">
+                    <span class="offers__item--arrow"></span>
+                    <p class="offers__item--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet commodi dolorum eum
                         incidunt neque odio quidem, totam veritatis. Assumenda autem consequuntur cumque dolore dolorem
                         expedita harum incidunt minus necessitatibus quia quidem, suscipit tempore, ut veniam,
                         voluptate. Aliquid cumque, ea error harum iste, libero neque nobis, officia ratione repellat sed
@@ -146,10 +146,10 @@
                         molestiae necessitatibus nesciunt nobis nulla praesentium quia, rerum sed tempore ullam
                         voluptatibus!</p>
                 </li>
-                <li class="list__item">Graphic Design
-                    <img class="list__item--img" src="img/Image2.png" alt="">
-                    <span class="list__item--arrow"></span>
-                    <p class="list__item--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A beatae consequatur consequuntur
+                <li class="offers__item">Graphic Design
+                    <img class="offers__item--img" src="img/Image2.png" alt="">
+                    <span class="offers__item--arrow"></span>
+                    <p class="offers__item--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A beatae consequatur consequuntur
                         deleniti deserunt dolores ea eaque enim error, eveniet, in inventore ipsa itaque iusto laborum
                         molestias nemo nesciunt odit officia pariatur provident quae quam quasi rem reprehenderit
                         repudiandae sint totam voluptas voluptates voluptatum. Ab cupiditate deserunt dignissimos
@@ -158,10 +158,10 @@
                         ex facilis fugiat, hic iusto perspiciatis sit voluptatum. Alias aliquid corporis culpa deserunt
                         facere harum minus natus nisi, repellat tenetur. Accusantium culpa ex porro quae quia ullam.</p>
                 </li>
-                <li class="list__item">Online Support
-                    <img class="list__item--img" src="img/Image3.png" alt="">
-                    <span class="list__item--arrow"></span>
-                    <p class="list__item--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolore dolorum illum magnam nobis
+                <li class="offers__item">Online Support
+                    <img class="offers__item--img" src="img/Image3.png" alt="">
+                    <span class="offers__item--arrow"></span>
+                    <p class="offers__item--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolore dolorum illum magnam nobis
                         quibusdam quidem sapiente. Accusamus aperiam cum cumque dicta illum itaque nisi provident, quod
                         quos reiciendis, repellendus sequi similique sint voluptas voluptatem. Dicta dignissimos dolor
                         eum eveniet laudantium nobis obcaecati repellat? Aperiam asperiores nulla sequi! At cupiditate
@@ -171,10 +171,10 @@
                         officiis omnis quo reprehenderit veniam. Ab assumenda dignissimos dolores error, magnam
                         voluptas?</p>
                 </li>
-                <li class="list__item">App Design
-                    <img class="list__item--img" src="img/Image4.png" alt="">
-                    <span class="list__item--arrow"></span>
-                    <p class="list__item--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aliquid dignissimos dolore
+                <li class="offers__item">App Design
+                    <img class="offers__item--img" src="img/Image4.png" alt="">
+                    <span class="offers__item--arrow"></span>
+                    <p class="offers__item--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aliquid dignissimos dolore
                         doloribus eius fugiat iste nulla omnis possimus quaerat quibusdam rem repudiandae rerum sit vel
                         veniam veritatis vero voluptatibus? Labore laboriosam minima, officia optio pariatur repellat!
                         Architecto corporis cum doloremque doloribus ea earum esse est incidunt iste, molestiae nobis
@@ -184,10 +184,10 @@
                         quas quidem quo recusandae rem repudiandae sed soluta suscipit, tempore totam voluptatibus.
                         Assumenda, illum rerum!</p>
                 </li>
-                <li class="list__item">Online Marketing
-                    <img class="list__item--img" src="img/Image5.png" alt="">
-                    <span class="list__item--arrow"></span>
-                    <p class="list__item--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt ipsum optio porro quod,
+                <li class="offers__item">Online Marketing
+                    <img class="offers__item--img" src="img/Image5.png" alt="">
+                    <span class="offers__item--arrow"></span>
+                    <p class="offers__item--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt ipsum optio porro quod,
                         reprehenderit ullam vitae voluptatum. A accusamus amet eaque, id ipsam libero officiis quos
                         recusandae. Corporis dignissimos necessitatibus odio optio quam sit unde. A autem corporis
                         dolore dolorum ducimus ea, eos esse et expedita fuga fugit harum illum in itaque magni maiores
@@ -196,10 +196,10 @@
                         quisquam ratione reiciendis repellat! Accusantium amet, cumque dolores eligendi facilis incidunt
                         itaque maiores qui quia, quo ratione repudiandae tenetur.</p>
                 </li>
-                <li class="list__item">Seo Service
-                    <img class="list__item--img" src="img/Image6.png" alt="">
-                    <span class="list__item--arrow"></span>
-                    <p class="list__item--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad deserunt eaque
+                <li class="offers__item">Seo Service
+                    <img class="offers__item--img" src="img/Image6.png" alt="">
+                    <span class="offers__item--arrow"></span>
+                    <p class="offers__item--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad deserunt eaque
                         exercitationem facere, nemo odio quas unde vel voluptates. A accusantium at commodi consectetur
                         culpa dignissimos, dolorem eaque eos esse et, impedit iste nam odio officia officiis provident
                         quis sed. Adipisci assumenda autem blanditiis cumque cupiditate delectus esse est exercitationem
@@ -210,8 +210,8 @@
                 </li>
             </ul>
             <div class="examples__description">
-                <img class="description__img" src="img/Image1.png" alt="">
-                <p class="description__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet commodi dolorum eum incidunt
+                <img class="description-img" src="img/Image1.png" alt="">
+                <p class="description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet commodi dolorum eum incidunt
                     neque odio quidem, totam veritatis. Assumenda autem consequuntur cumque dolore dolorem expedita
                     harum incidunt minus necessitatibus quia quidem, suscipit tempore, ut veniam, voluptate. Aliquid
                     cumque, ea error harum iste, libero neque nobis, officia ratione repellat sed sint totam! A ad
@@ -234,127 +234,127 @@
 
 <section class="news">
     <div class="container">
-        <div class="news__title">
+        <div class="title">
             <h3 class="title__text">Breaking News</h3>
             <hr class="title__line">
             <hr class="title__line">
         </div>
-        <div class="news__storage">
-            <div class="storage__item">
-                <div class="storage__img">
-                    <div class="storage__date">
-                        <p class="date">12</p>
-                        <p class="date">Feb</p>
+        <div class="storage">
+            <div class="post">
+                <div class="post__img">
+                    <div class="post__date">
+                        <p>12</p>
+                        <p>Feb</p>
                     </div>
                 </div>
                 <div class="storage__description">
                     <h5 class="description__name">Amazing Blog Post</h5>
-                    <div class="description__creator">
+                    <div class="creator">
                         <span class="creator__name">By <a class="creator__name--color" href="">admin</a></span>
                         <a class="creator__name--color" href="">2 comment</a>
                     </div>
                 </div>
             </div>
-            <div class="storage__item">
-                <div class="storage__img">
-                    <div class="storage__date">
-                        <p class="date">12</p>
-                        <p class="date">Feb</p>
+            <div class="post">
+                <div class="post__img">
+                    <div class="post__date">
+                        <p>12</p>
+                        <p>Feb</p>
                     </div>
                 </div>
                 <div class="storage__description">
                     <h5 class="description__name">Amazing Blog Post</h5>
-                    <div class="description__creator">
+                    <div class="creator">
                         <span class="creator__name">By <a class="creator__name--color" href="">admin</a></span>
                         <a class="creator__name--color" href="">2 comment</a>
                     </div>
                 </div>
             </div>
-            <div class="storage__item">
-                <div class="storage__img">
-                    <div class="storage__date">
-                        <p class="date">12</p>
-                        <p class="date">Feb</p>
+            <div class="post">
+                <div class="post__img">
+                    <div class="post__date">
+                        <p>12</p>
+                        <p>Feb</p>
                     </div>
                 </div>
                 <div class="storage__description">
                     <h5 class="description__name">Amazing Blog Post</h5>
-                    <div class="description__creator">
+                    <div class="creator">
                         <span class="creator__name">By <a class="creator__name--color" href="">admin</a></span>
                         <a class="creator__name--color" href="">2 comment</a>
                     </div>
                 </div>
             </div>
-            <div class="storage__item">
-                <div class="storage__img">
-                    <div class="storage__date">
-                        <p class="date">12</p>
-                        <p class="date">Feb</p>
+            <div class="post">
+                <div class="post__img">
+                    <div class="post__date">
+                        <p>12</p>
+                        <p>Feb</p>
                     </div>
                 </div>
                 <div class="storage__description">
                     <h5 class="description__name">Amazing Blog Post</h5>
-                    <div class="description__creator">
+                    <div class="creator">
                         <span class="creator__name">By <a class="creator__name--color" href="">admin</a></span>
                         <a class="creator__name--color" href="">2 comment</a>
                     </div>
                 </div>
             </div>
-            <div class="storage__item">
-                <div class="storage__img">
-                    <div class="storage__date">
-                        <p class="date">12</p>
-                        <p class="date">Feb</p>
+            <div class="post">
+                <div class="post__img">
+                    <div class="post__date">
+                        <p>12</p>
+                        <p>Feb</p>
                     </div>
                 </div>
                 <div class="storage__description">
                     <h5 class="description__name">Amazing Blog Post</h5>
-                    <div class="description__creator">
+                    <div class="creator">
                         <span class="creator__name">By <a class="creator__name--color" href="">admin</a></span>
                         <a class="creator__name--color" href="">2 comment</a>
                     </div>
                 </div>
             </div>
-            <div class="storage__item">
-                <div class="storage__img">
-                    <div class="storage__date">
-                        <p class="date">12</p>
-                        <p class="date">Feb</p>
+            <div class="post">
+                <div class="post__img">
+                    <div class="post__date">
+                        <p>12</p>
+                        <p>Feb</p>
                     </div>
                 </div>
                 <div class="storage__description">
                     <h5 class="description__name">Amazing Blog Post</h5>
-                    <div class="description__creator">
+                    <div class="creator">
                         <span class="creator__name">By <a class="creator__name--color" href="">admin</a></span>
                         <a class="creator__name--color" href="">2 comment</a>
                     </div>
                 </div>
             </div>
-            <div class="storage__item">
-                <div class="storage__img">
-                    <div class="storage__date">
-                        <p class="date">12</p>
-                        <p class="date">Feb</p>
+            <div class="post">
+                <div class="post__img">
+                    <div class="post__date">
+                        <p>12</p>
+                        <p>Feb</p>
                     </div>
                 </div>
                 <div class="storage__description">
                     <h5 class="description__name">Amazing Blog Post</h5>
-                    <div class="description__creator">
+                    <div class="creator">
                         <span class="creator__name">By <a class="creator__name--color" href="">admin</a></span>
                         <a class="creator__name--color" href="">2 comment</a>
                     </div>
                 </div>
             </div>
-            <div class="storage__item">
-                <div class="storage__img">
-                    <div class="storage__date">
-                        <p class="date">12</p>
-                        <p class="date">Feb</p>
+            <div class="post">
+                <div class="post__img">
+                    <div class="post__date">
+                        <p>12</p>
+                        <p>Feb</p>
                     </div>
                 </div>
                 <div class="storage__description">
                     <h5 class="description__name">Amazing Blog Post</h5>
-                    <div class="description__creator">
+                    <div class="creator">
                         <span class="creator__name">By <a class="creator__name--color" href="">admin</a></span>
                         <a class="creator__name--color" href="">2 comment</a>
                     </div>
@@ -367,59 +367,59 @@
 
 <section class="comments">
     <div class="container">
-        <div class="comments__title">
-            <h3 class="title__text--comments">What People Say About theHam</h3>
+        <div class="title">
+            <h3 class="title__text title-comments">What People Say About theHam</h3>
             <hr class="title__line">
             <hr class="title__line">
         </div>
-        <div class="comments__items">
+        <div class="reviews">
             <span>،،</span>
 
-            <div class="comments__slider">
-                <ul class="slider__list">
-                    <li class="list__content">
-                        <p class="content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, architecto corporis
+            <div class="reviews__items">
+                <ul class="people">
+                    <li class="man">
+                        <p class="man__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, architecto corporis
                             debitis distinctio
                             dolorem, ducimus eaque error, et eveniet molestias nesciunt nobis quaerat quam quasi rem sit
                             tempora
                             ullam? A assumenda dolor, eius fuga ipsam nesciunt odit officiis sint soluta!</p>
-                        <p class="content__author">hasan ali</p>
-                        <p class="content__profession">UX Designer</p>
-                        <div class="slider__photo">
+                        <p class="man__name">hasan ali</p>
+                        <p class="man__profession">UX Designer</p>
+                        <div class="man__photo">
                             <img src="img/Men1.png" alt="">
                         </div>
                     </li>
 
-                    <li class="list__content">
-                        <p class="content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cum, deleniti deserunt
+                    <li class="man">
+                        <p class="man__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cum, deleniti deserunt
                             est incidunt laboriosam, maxime, mollitia natus officia optio sapiente voluptatibus! Ad
                             architecto deleniti distinctio eum maiores quam quibusdam quod quos sed tempora. Deleniti
                             mollitia placeat provident veniam! Est.</p>
-                        <p class="content__author">adriana alihman</p>
-                        <p class="content__profession">Java Developer</p>
-                        <div class="slider__photo">
+                        <p class="man__name">adriana alihman</p>
+                        <p class="man__profession">Java Developer</p>
+                        <div class="man__photo">
                             <img src="img/men2.png" alt="">
                         </div>
                     </li>
-                    <li class="list__content">
-                        <p class="content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cum cupiditate doloribus eius
+                    <li class="man">
+                        <p class="man__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cum cupiditate doloribus eius
                             et ipsa, nihil numquam sapiente veniam vero! Cum delectus earum error eveniet explicabo
                             fugiat, hic minima optio quidem repellat sunt, tempora tempore temporibus! Error facere
                             nostrum quam!</p>
-                        <p class="content__author">lucifer morningstar</p>
-                        <p class="content__profession">Devil</p>
-                        <div class="slider__photo">
+                        <p class="man__name">lucifer morningstar</p>
+                        <p class="man__profession">Devil</p>
+                        <div class="man__photo">
                             <img src="img/men3.png" alt="">
                         </div>
                     </li>
-                    <li class="list__content">
-                        <p class="content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto beatae, delectus
+                    <li class="man">
+                        <p class="man__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto beatae, delectus
                             dolorum eius et ex explicabo hic ipsam iste itaque iusto libero, molestias nostrum numquam
                             odit perferendis perspiciatis placeat quas quia quo repellat rerum saepe sapiente similique
                             sit vel.</p>
-                        <p class="content__author">david maiser</p>
-                        <p class="content__profession">JS developer</p>
-                        <div class="slider__photo">
+                        <p class="man__name">david maiser</p>
+                        <p class="man__profession">JS developer</p>
+                        <div class="man__photo">
                             <img src="img/men4.png" alt="">
                         </div>
                     </li>
@@ -427,9 +427,9 @@
                 </ul>
             </div>
 
-            <div class="comments__users">
-                <div class="comments__arrow left">&#706</div>
-                <ul class="users__links">
+            <div class="reviews__users">
+                <div class="arrow left">&lt</div>
+                <ul class="users">
                     <li id="first-user" class="users__photo">
                         <img src="img/men1small.png" alt="">
                     </li>
@@ -443,11 +443,12 @@
                         <img src="img/men4.png" alt="">
                     </li>
                 </ul>
-                <div class="comments__arrow right">&#707</div>
+                <div class="arrow right">&gt</div>
             </div>
         </div>
     </div>
 </section>
+
 <section class="photo">
     <div class="container">
         <div class="photo__title">

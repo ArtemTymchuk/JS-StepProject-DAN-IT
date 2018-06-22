@@ -1,15 +1,15 @@
 $(document).ready(function () {
 
-    $(".list__item").click(function (event) {
+    $(".offers__item").click(function (event) {
 
         let img = event.target.firstElementChild;
         let arrow = event.target.children[1];
         let text = event.target.lastElementChild;
 
-        $(".description__img").attr("src", ($(img).attr("src")));
-        $(".description__text").text($(text).text());
-        $(".list__item").css({"background-color": "#f5f9fb", "color": "#717171"});
-        $(".list__item--arrow").css({"visibility": "hidden"});
+        $(".description-img").attr("src", ($(img).attr("src")));
+        $(".description-text").text($(text).text());
+        $(".offers__item").css({"background-color": "#f5f9fb", "color": "#717171"});
+        $(".offers__item--arrow").css({"visibility": "hidden"});
         $(this).css({"background-color": "#18cfab", "color": "#ffffff"});
         $(arrow).css({"visibility": "visible"});
     });
