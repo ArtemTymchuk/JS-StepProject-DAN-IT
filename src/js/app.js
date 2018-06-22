@@ -1,58 +1,57 @@
 $(document).ready(function () {
 
-    $(".services__examples ul li").click(function (event) {
-        console.log(event.target);
-        let li = event.target;
+    $(".list__item").click(function (event) {
+
         let img = event.target.firstElementChild;
         let arrow = event.target.children[1];
-        console.log(arrow);
         let text = event.target.lastElementChild;
-        $(".services__description img").attr("src", ($(img).attr("src")));
-        $(".services__description p").text($(text).text());
-        $(".services__examples ul li").css({"background-color": "#f5f9fb", "color": "#717171"});
-        $(".services__examples ul li span").css({"visibility": "hidden"});
-        $(li).css({"background-color": "#18cfab", "color": "#ffffff"});
+
+        $(".description__img").attr("src", ($(img).attr("src")));
+        $(".description__text").text($(text).text());
+        $(".list__item").css({"background-color": "#f5f9fb", "color": "#717171"});
+        $(".list__item--arrow").css({"visibility": "hidden"});
+        $(this).css({"background-color": "#18cfab", "color": "#ffffff"});
         $(arrow).css({"visibility": "visible"});
     });
 
 
-    $(".capabilities div:first-child, .capabilities div:nth-child(3)").mouseenter(function (event) {
+    $("#first-item, #third-item").mouseenter(function () {
 
-        $(".capabilities div").css({"background-color": "#1c2a33", "border-top-color": "#18cfab"});
-        $(".capabilities div svg path").css("fill", "#18cfab");
-        $(".capabilities div p").css("color", "#18cfab");
+        $(".capabilities__item").css({"background-color": "#1c2a33", "border-top-color": "#18cfab"});
+        $(".svg__color").css("fill", "#18cfab");
+        $(".capabilities__explain").css("color", "#18cfab");
 
     }).mouseleave(function () {
-        $(".capabilities div").css({"background-color": "#18cfab", "border-top-color": "#ffffff"});
-        $(".capabilities div:first-child, .capabilities div:nth-child(3)")
+        $(".capabilities__item").css({"background-color": "#18cfab", "border-top-color": "#ffffff"});
+        $("#first-item, #third-item")
             .css({"background-color": "#1c2a33", "color": "#18cfab", "border-top-color": "#18cfab"});
-        $(".capabilities div:first-child svg path, .capabilities div:nth-child(3) svg path")
+        $("#first-svg, #third-svg")
             .css("fill", "#18cfab");
-        $(".capabilities div:first-child p, .capabilities div:nth-child(3) p")
+        $("#first-explain, #third-explain")
             .css("color", "#18cfab");
-        $(".capabilities div:nth-child(2) svg path, .capabilities div:last-child svg path")
+        $("#second-svg, #second-svg")
             .css("fill", "white");
-        $(".capabilities div:nth-child(2) p, .capabilities div:last-child p")
+        $("#second-explain, #fourth-explain")
             .css("color", "#ffffff");
     });
 
 
-    $(".capabilities div:nth-child(2), .capabilities div:last-child").mouseenter(function () {
-        $(".capabilities div").css({"background-color": "#18cfab", "border-top-color": "#ffffff"});
-        $(".capabilities div svg path").css("fill", "#ffffff");
-        $(".capabilities div p").css("color", "#ffffff");
+    $("#second-item, #fourth-item").mouseenter(function () {
+        $(".capabilities__item").css({"background-color": "#18cfab", "border-top-color": "#ffffff"});
+        $(".svg__color").css("fill", "#ffffff");
+        $(".capabilities__explain").css("color", "#ffffff");
 
     }).mouseleave(function () {
-        $(".capabilities div").css({"background-color": "#18cfab", "border-top-color": "#ffffff"});
-        $(".capabilities div:first-child, .capabilities div:nth-child(3)")
+        $(".capabilities__item").css({"background-color": "#18cfab", "border-top-color": "#ffffff"});
+        $("#first-item, #third-item")
             .css({"background-color": "#1c2a33", "color": "#18cfab", "border-top-color": "#18cfab"});
-        $(".capabilities div:first-child svg path, .capabilities div:nth-child(3) svg path")
+        $("#first-svg, #third-svg")
             .css("fill", "#18cfab");
-        $(".capabilities div:first-child p, .capabilities div:nth-child(3) p")
+        $("#first-explain, #third-explain")
             .css("color", "#18cfab");
-        $(".capabilities div:nth-child(2) svg path, .capabilities div:last-child svg path")
+        $("#second-svg, #fourth-svg")
             .css("fill", "white");
-        $(".capabilities div:nth-child(2) p, .capabilities div:last-child p")
+        $("#second-explain, #fourth-explain")
             .css("color", "#ffffff");
     });
 

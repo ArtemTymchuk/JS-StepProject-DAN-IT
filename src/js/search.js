@@ -1,32 +1,32 @@
 $(document).ready(function () {
 
-    $(".header__sorry").hide();
 
-
-
-
-    $(".header__items ul li:last-child").click(function () {
-        $(".header__items ul").css({"width": "75%"});
-        $(".header__items ul li:nth-child(10)").toggle()
+    $("#search").click(function () {
+        $(".links").css({"width": "75%"});
+        $("#search-text").toggle();
+        let visibility = $("#search-text").css("display");
+        if (visibility === 'none') {
+            $(".links").css({"width": "60%"});
+        }
     });
 
     $(document).on('click', function(e) {
-        if (!$(e.target).closest(".header__items ul").length) {
-            $('.header__items ul li:nth-child(10)').hide();
-            $(".header__items ul").css({"width": "60%"});
-        }
+        if (!$(e.target).closest(".links").length) {
+            $('#search-text').hide();
+            $(".links").css({"width": "60%"});
+           }
         e.stopPropagation();
     });
 
 
 
 
-    $(".header__items ul li:nth-child(10)").keydown(function (e) {
+    $("#search-text").keydown(function (e) {
         if (e.which == 13) {
             e.preventDefault();
-            $(".header__items ul").css({"width": "60%"});
-            $(".header__items ul li:nth-child(10)").css({"display": "none"});
-            let textValue = $(".header__items ul li:nth-child(10) input").val();
+            $(".links").css({"width": "60%"});
+            $("#search-text").css({"display": "none"});
+            let textValue = $("#search-item").val();
             let key = '9342853-8c19e5cbc2492848be3ea2f52';
             let url = 'https://pixabay.com/api/?key=' + key + '&q=' + textValue + '&per_page=100&image_type=photo&lang=ru&lang=en';
             $.get(url, function (data) {
@@ -58,7 +58,7 @@ $(document).ready(function () {
 
                 }
             });
-            $(".header__items ul li:nth-child(10) input").val("");
+            $("#search-item").val("");
 
     return false;
 
