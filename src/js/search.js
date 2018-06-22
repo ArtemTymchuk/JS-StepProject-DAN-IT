@@ -3,20 +3,16 @@ $(document).ready(function () {
 
     $("#search").click(function () {
         $(".pages").css({"width": "75%"});
-        $("#search-text").toggle();
-        let visibility = $("#search-text").css("display");
-        if (visibility === 'none') {
-            $(".pages").css({"width": "60%"});
-        }
+        $("#search-text").toggle(function () {
+            $("#search-item").focus().blur(function () {
+                $("#search-text").hide();
+                $(".pages").css({"width": "60%"});
+            })
+        });
+
     });
 
-    $(document).on('click', function(e) {
-        if (!$(e.target).closest(".pages").length) {
-            $('#search-text').hide();
-            $(".pages").css({"width": "60%"});
-           }
-        e.stopPropagation();
-    });
+
 
 
     $("#search-text").keydown(function (e) {
