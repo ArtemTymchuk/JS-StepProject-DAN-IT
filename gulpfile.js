@@ -87,7 +87,7 @@ gulp.task('reload', function () {
     gulp.watch('./src/js/**/*.js', ['js']);
     gulp.watch('./src/img/*', ['img']);
     gulp.watch('./src/*.html').on('change', browserSync.reload);
-    gulp.watch('./src/**/*', ['html']).on('change', browserSync.reload);
+    gulp.watch('./src/**/*', ['html'], ['img']).on('change', browserSync.reload);
 });
 
 gulp.task('dev', function (callback) {
