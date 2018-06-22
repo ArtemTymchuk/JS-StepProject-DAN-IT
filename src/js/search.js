@@ -19,8 +19,6 @@ $(document).ready(function () {
     });
 
 
-
-
     $("#search-text").keydown(function (e) {
         if (e.which == 13) {
             e.preventDefault();
@@ -30,7 +28,7 @@ $(document).ready(function () {
             let key = '9342853-8c19e5cbc2492848be3ea2f52';
             let url = 'https://pixabay.com/api/?key=' + key + '&q=' + textValue + '&per_page=100&image_type=photo&lang=ru&lang=en';
             $.get(url, function (data) {
-                console.log(url);
+
                 let images = data.hits;
                 if (images.length == 0) {
                     $(".sorry").show();
